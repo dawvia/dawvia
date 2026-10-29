@@ -1,0 +1,22 @@
+[
+  {
+    "source_sha": "cf5c6cc11d3cf379a6b3a5c4413ee6ffc2c1e8e2",
+    "platform": "darwin-arm64",
+    "transfer_url": "https://dawvia.com/downloads/computer/transfer-e1e7d0a8796b9ea5906ad8664dd189404e58c9c2/darwin-arm64",
+    "files": {
+      "dawvia-darwin-arm64.tar.gz": "e254e9f0bff31ee10d81b99132351b7386bd43fe2606494cb68fe4f8d2534f01",
+      "SHA256SUMS": "3d0d1d6581095667b350346a384c0b72b33ae1ec7baad9f3b2764bf6d3fbd03a",
+      "SHA256SUMS.sig": "bea460a1314d054472f216c0d5261aeee7602d25fa54f90c34e81e1f8738723a"
+    }
+  },
+  {
+    "source_sha": "781b00a9bb6ff0baaa9b327c03699fdfe9adecbf",
+    "platform": "linux-amd64",
+    "transfer_url": "https://dawvia.com/downloads/computer/transfer-e1e7d0a8796b9ea5906ad8664dd189404e58c9c2/linux-amd64",
+    "files": {
+      "dawvia-linux-amd64.tar.gz": "1744beb4198a1ff8b3519ebb2db657febb6d0f7f7f92ce350da6896395b2122d",
+      "SHA256SUMS": "9bb80bc74dcd7553960a722d77768fff1bf6444873a691d2078ae05a10194a14",
+      "SHA256SUMS.sig": "79eb50fd1619257184d6105115e1ae8b6bc944237c964c2f243e627988b9eab1"
+    }
+  }
+]

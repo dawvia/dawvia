@@ -3,8 +3,7 @@
 Official distribution repository for signed Dawvia client releases.
 
 Client downloads will be published under this repository's **Releases**. Each
-release uses its full source revision as the tag. No signed client release has
-been published here yet.
+release uses its `client-<full-source-revision>` as the tag. Release assets are verified before publication.
 
 ## Package format
 
@@ -28,7 +27,7 @@ never distributed here.
 
 A compatible forge serves the exact same package at:
 
-`<repository>/releases/download/<source-revision>/dawvia-<platform>.tar.gz`
+`<repository>/releases/download/client-<source-revision>/dawvia-<platform>.tar.gz`
 
 The signed-release installer accepts a space-separated list of repository URLs
 with `--release-sources`. Gitee (`https://gitee.com/dawvia/dawvia`) may be added
