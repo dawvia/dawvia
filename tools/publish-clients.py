@@ -12,7 +12,10 @@ REPO = 'dawvia/dawvia'
 
 
 def gh(*args):
-    return json.loads(subprocess.check_output(['gh', *args], text=True))
+    try:
+        return json.loads(subprocess.check_output(['gh', *args], text=True, stderr=subprocess.PIPE))
+    except subprocess.CalledProcessError as error:
+        raise RuntimeError('GitHub API: ' + error.stderr.strip()) from error
 
 
 def digest(path):
@@ -67,6 +70,7 @@ def main():
                 if manifest != expected:
                     raise ValueError('Signed binary identity mismatch')
             staged.append((item, directory))
+            print('::notice title=Verified client::' + target + ' ' + revision, flush=True)
         # No external mutation until every platform has passed verification.
         for item, directory in staged:
             tag = 'client-' + item['source_sha']
@@ -97,4 +101,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as error:
+        print('::error title=Client publication failed::' + str(error).replace('\n', '%0A'), flush=True)
+        raise
